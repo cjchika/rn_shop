@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Text } from "react-native";
 import axios from "axios";
 // import { RAPID_API_KEY } from "@env";
 

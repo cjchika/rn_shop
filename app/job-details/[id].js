@@ -32,7 +32,21 @@ const JobDetails = () => {
 
   const onRefresh = () => {};
 
-  const displayTabContent = () => {};
+  const displayTabContent = () => {
+    switch (activeTab) {
+      case "Qualifications":
+        return (
+          <Specifics
+            title="Qualifications"
+            points={data[0].job_highlights?.Qualifications ?? ["N/A"]}
+          />
+        );
+      case "About":
+      case "Responsibility":
+      default:
+        break;
+    }
+  };
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.lightWhite }}>
